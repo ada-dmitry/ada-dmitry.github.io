@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: home
 title: Главная
+classes: wide
 ---
 
 # Привет!
