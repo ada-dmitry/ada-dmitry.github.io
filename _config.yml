@@ -16,7 +16,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
-  - jekyll-uuid
 
 
 # --- Пагинация постов (если используешь _posts) ---
