@@ -7,7 +7,7 @@ lang: ru-RU
 
 # --- Тема ---
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "sunrise"  # варианты: default, air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
+minimal_mistakes_skin: "plum"  # варианты: default, air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
 
 # --- Плагины (совместимые с GitHub Pages) ---
 plugins:
@@ -23,6 +23,9 @@ paginate_path: /page:num/
 
 # --- Коллекция заметок для garden ---
 collections:
+  pages:
+    output: true
+    permalink: /:path/
   notes:
     output: true
     permalink: /notes/:title/
