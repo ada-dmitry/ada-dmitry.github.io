@@ -5,7 +5,7 @@ url: "https://dg.ada-dev.ru"
 baseurl: ""
 
 remote_theme: mmistakes/minimal-mistakes
-minimal_mistakes_skin: "default"   # варианты: air, dark, contrast, neon и др.
+minimal_mistakes_skin: "dark"   # варианты: air, dark, contrast, neon и др.
 
 plugins:
   - jekyll-remote-theme
