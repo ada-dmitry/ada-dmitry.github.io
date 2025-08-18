@@ -1,0 +1,7 @@
+main:
+  - title: "Главная"
+    url: /
+  - title: "Заметки"
+    url: /notes/
+  - title: "Обо мне"
+    url: /about/

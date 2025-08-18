@@ -1,20 +1,74 @@
-title: Мой Digital Garden
-email: your-email@example.com
-description: "Заметки и мысли"
-baseurl: ""
-url: "https://dg.ada-dev.ru"  # твой домен
-twitter_username: ""
-github_username: ada-dmitry
+# --- Сайт ---
+title: "Digital Garden"
+description: "Заметки, мысли и проекты"
+url: "https://dg.ada-dev.ru"   # твой домен
+baseurl: ""                    # если сайт в корне домена
+lang: ru-RU
 
+# --- Тема ---
 remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dark"  # варианты: default, air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
+
+# --- Плагины (совместимые с GitHub Pages) ---
 plugins:
   - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
 
-minimal_mistakes_skin: "dark"
+# --- Пагинация постов (если используешь _posts) ---
+paginate: 10
+paginate_path: /page:num/
 
-
-# каталог заметок
+# --- Коллекция заметок для garden ---
 collections:
   notes:
     output: true
-    permalink: /:path/
+    permalink: /notes/:title/
+
+# --- Значения по умолчанию (лейауты/опции) ---
+defaults:
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: single
+      toc: true          # оглавление справа
+      author_profile: false
+      classes: wide
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+      toc: true
+      author_profile: true
+
+# --- Навигация (подключим _data/navigation.yml) ---
+navigation:
+  main: true
+
+# --- Поиск (встроенный lunr) ---
+search: true
+
+# --- Автор (для сайдбара/карточек) ---
+author:
+  name: "Ada"
+  bio: "Пишу про dev и заметки."
+  avatar: /assets/images/avatar.png  # положи файл, если нужен
+
+# --- Соц.ссылки (иконки подтянутся автоматически) ---
+social:
+  github: ada-dmitry
+  rss: true
+
+# --- Прочее ---
+markdown: kramdown
+permalink: /:categories/:title/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - _site
