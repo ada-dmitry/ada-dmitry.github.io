@@ -4,7 +4,6 @@ description: "Заметки, проекты, идеи"
 url: "https://dg.ada-dev.ru"   # твой домен
 baseurl: ""                    # если в корне
 
-theme: jekyll-theme-chirpy
 remote_theme: cotes2020/jekyll-theme-chirpy
 
 lang: ru-RU
