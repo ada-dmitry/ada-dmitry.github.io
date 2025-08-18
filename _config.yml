@@ -29,7 +29,7 @@ collections:
     permalink: /:path/
   notes:
     output: true
-    permalink: /notes/:basename/
+    permalink: /notes/:title/
 
 # --- Значения по умолчанию (лейауты/опции) ---
 defaults:
