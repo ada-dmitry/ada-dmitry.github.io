@@ -1,6 +1,4 @@
 source "https://rubygems.org"
 
 gem "github-pages", group: :jekyll_plugins
-gem "jekyll-remote-theme", group: :jekyll_plugins
-gem "jekyll-include-cache", group: :jekyll_plugins
-gem "commonmarker", ">= 0.24.0.pre"
+gem "jekyll-remote-theme"

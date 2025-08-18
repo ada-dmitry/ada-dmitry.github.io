@@ -22,3 +22,6 @@ collections:
   notes:
     output: true
     permalink: /notes/:title/
+
+read_time: false
+
