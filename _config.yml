@@ -30,7 +30,7 @@ collections:
     permalink: /:path/
   notes:
     output: true
-    permalink: /notes/:uuid/
+    permalink: /notes/:basename/
 
 # --- Значения по умолчанию (лейауты/опции) ---
 defaults:
