@@ -1,30 +1,25 @@
 title: "Digital Garden"
-description: "Заметки и статьи"
-lang: ru
-url: "https://dg.ada-dev.ru"
-baseurl: ""
+tagline: "Мои заметки и статьи"
+description: "Заметки, проекты, идеи"
+url: "https://dg.ada-dev.ru"   # твой домен
+baseurl: ""                    # если в корне
 
-remote_theme: mmistakes/minimal-mistakes
-minimal_mistakes_skin: "dark"   # варианты: air, dark, contrast, neon и др.
+theme: jekyll-theme-chirpy
+remote_theme: cotes2020/jekyll-theme-chirpy
+
+lang: ru-RU
 
 plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-remote-theme
-  - jekyll-include-cache
+  - jekyll-archives
 
-# Коллекция заметок (как garden, без дат)
+paginate: 10
+paginate_path: /page:num
+
+# чтобы в меню появлялись страницы
 collections:
   notes:
     output: true
     permalink: /notes/:title/
-
-defaults:
-  - scope: { path: "", type: notes }
-    values:
-      layout: single
-      author_profile: false
-  - scope: { path: "", type: posts }
-    values:
-      layout: single
-      author_profile: false
-
-search: true        # в теме есть встроенный поиск
