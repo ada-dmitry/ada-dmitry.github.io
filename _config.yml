@@ -1,27 +1,20 @@
-title: "Digital Garden"
-tagline: "Мои заметки и статьи"
-description: "Заметки, проекты, идеи"
-url: "https://dg.ada-dev.ru"   # твой домен
-baseurl: ""                    # если в корне
+title: Мой Digital Garden
+email: your-email@example.com
+description: "Заметки и мысли"
+baseurl: ""
+url: "https://dg.ada-dev.ru"  # твой домен
+twitter_username: ""
+github_username: ada-dmitry
 
-remote_theme: cotes2020/jekyll-theme-chirpy
-
-lang: ru-RU
+# тема
+remote_theme: maximevaillancourt/digital-garden-jekyll-template
 
 plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-remote-theme
-  - jekyll-archives
+  - jekyll-include-cache
 
-paginate: 10
-paginate_path: /page:num
-
-# чтобы в меню появлялись страницы
+# каталог заметок
 collections:
   notes:
     output: true
-    permalink: /notes/:title/
-
-read_time: false
-
+    permalink: /:path/
