@@ -1,7 +1,7 @@
 ---
 title: "Обо мне"
 layout: single
-permalink: /about/
+permalink: /aboutme/
 author_profile: true
 ---
 
