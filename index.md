@@ -1,6 +1,5 @@
 ---
 layout: home
-title: Главная
 classes: wide
 ---
 
