@@ -1,31 +1,30 @@
 title: "Digital Garden"
-description: "Мои заметки и ссылки"
+description: "Заметки и статьи"
 lang: ru
-url: "https://dg.ada-dev.ru"   # важное поле для ссылок/кэша
-baseurl: ""                     # для user.github.io — пусто
+url: "https://dg.ada-dev.ru"
+baseurl: ""
 
-remote_theme: maximevaillancourt/digital-garden-jekyll-template
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "default"   # варианты: air, dark, contrast, neon и др.
+
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
 
-markdown: kramdown
-
-# Коллекция заметок
+# Коллекция заметок (как garden, без дат)
 collections:
   notes:
     output: true
     permalink: /notes/:title/
 
-# Значения по умолчанию
 defaults:
   - scope: { path: "", type: notes }
-    values: { layout: note }
+    values:
+      layout: single
+      author_profile: false
   - scope: { path: "", type: posts }
-    values: { layout: post }
+    values:
+      layout: single
+      author_profile: false
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
+search: true        # в теме есть встроенный поиск
