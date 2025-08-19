@@ -6,6 +6,9 @@ baseurl: ""                    # если сайт в корне домена
 lang: ru-RU
 favicon: /assets/images/favicons/favicon.ico
 
+footer_scripts:
+  - /_includes/custom-footer-scripts.html
+
 # --- Тема ---
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dark"  # варианты: default, air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
