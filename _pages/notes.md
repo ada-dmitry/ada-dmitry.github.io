@@ -5,24 +5,24 @@ permalink: /notes/
 ---
 
 {%- comment -%}
-Берём _notes/HomeServer/hs1.md → группируем по "HomeServer".
-Если файл лежит прямо в _notes/, кладём его в группу "Без проекта".
+Группируем по project (лучше проставлять через defaults по подпапке),
+внутри каждой группы сортируем по order (число), потом по title.
 {%- endcomment -%}
 
-{%- assign by_folder = site.notes
-  | group_by_exp: "n", "n.path | remove_first: '_notes/' | split: '/' | first" -%}
+{%- assign groups = site.notes | group_by: "project" | sort: "name" -%}
 
-{%- for g in by_folder -%}
-  {%- assign folder = g.name -%}
-  {%- if folder == g.items[0].path -%}{% assign folder = "Без проекта" %}{% endif %}
-
-### {{ folder }} ({{ g.items | size }})
+{%- for g in groups -%}
+### {{ g.name | default: "Без проекта" }} ({{ g.items | size }})
 
 <ul>
-{%- assign items = g.items | sort: "title" -%} {# или "date" | reverse #}
-{%- for n in items -%}
-  <li><a href="{{ n.url | relative_url }}">{{ n.title }}</a></li>
-{%- endfor -%}
+  {%- assign items = g.items | sort: "title" -%}        {# вторичный ключ #}
+  {%- assign items = items   | sort: "order" -%}        {# первичный ключ  #}
+  {%- for n in items -%}
+    <li>
+      <a href="{{ n.url | relative_url }}">{{ n.title }}</a>
+      {%- if n.order and n.order != 999 -%} <small>(№{{ n.order }})</small>{%- endif -%}
+    </li>
+  {%- endfor -%}
 </ul>
 
 {%- endfor -%}
