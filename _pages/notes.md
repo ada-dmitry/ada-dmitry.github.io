@@ -19,15 +19,12 @@ permalink: /notes/
 
 ### {{ folder }} ({{ g.items | size }})
 
-{%- comment -%}
-  Подготовим массив с добавленным полем ord (число из префикса).
-{%- endcomment -%}
 {%- assign items_with_ord = "" | split: "" -%}
 {%- for n in g.items -%}
-  {%- assign base = n.path | split: '/' | last | split: '.' | first -%}   {# 01-hs -> "01-hs" #}
-  {%- assign num_str = base | split: '-' | first -%}                       {# "01" #}
-  {%- assign ord = num_str | plus: 0 -%}                                   {# 0 если нет числа #}
-  {%- if ord == 0 and num_str != "0" -%}{% assign ord = 9999 %}{% endif %} {# без префикса — в конец #}
+  {%- assign base = n.path | split: '/' | last | split: '.' | first -%}
+  {%- assign num_str = base | split: '-' | first -%}
+  {%- assign ord = num_str | plus: 0 -%}
+  {%- if ord == 0 and num_str != "0" -%}{% assign ord = 9999 %}{% endif %}
   {%- assign n2 = n | merge: {"ord": ord} -%}
   {%- assign items_with_ord = items_with_ord | push: n2 -%}
 {%- endfor -%}
