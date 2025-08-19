@@ -4,25 +4,23 @@ title: Все заметки
 permalink: /notes/
 ---
 
-{%- comment -%}
-Группируем по project (лучше проставлять через defaults по подпапке),
-внутри каждой группы сортируем по order (число), потом по title.
-{%- endcomment -%}
+{%- assign notes_with_project = "" | split: "" -%}
+{%- for n in site.notes -%}
+  {%- assign parts = n.path | split: "/" -%}
+  {%- assign project_name = parts[1] -%}  {# parts[0] = "_notes", parts[1] = подпапка #}
+  {%- assign n = n | merge: { "project": project_name } -%}
+  {%- assign notes_with_project = notes_with_project | push: n -%}
+{%- endfor -%}
 
-{%- assign groups = site.notes | group_by: "project" | sort: "name" -%}
+{%- assign groups = notes_with_project | group_by: "project" | sort: "name" -%}
 
 {%- for g in groups -%}
-### {{ g.name | default: "Без проекта" }} ({{ g.items | size }})
+### {{ g.name }} ({{ g.items | size }})
 
 <ul>
-  {%- assign items = g.items | sort: "title" -%}        {# вторичный ключ #}
-  {%- assign items = items   | sort: "order" -%}        {# первичный ключ  #}
+  {%- assign items = g.items | sort: "basename" -%}
   {%- for n in items -%}
-    <li>
-      <a href="{{ n.url | relative_url }}">{{ n.title }}</a>
-      {%- if n.order and n.order != 999 -%} <small>(№{{ n.order }})</small>{%- endif -%}
-    </li>
+    <li><a href="{{ n.url | relative_url }}">{{ n.title }}</a></li>
   {%- endfor -%}
 </ul>
-
 {%- endfor -%}
