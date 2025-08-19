@@ -46,7 +46,7 @@ defaults:
       type: "posts"
     values:
       layout: single
-      toc: true
+      toc: false
       author_profile: true
 
 # --- Навигация (подключим _data/navigation.yml) ---
