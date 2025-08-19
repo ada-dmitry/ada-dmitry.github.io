@@ -1,13 +1,11 @@
 # --- Сайт ---
-title: "Цифровой садик $_{by ada}$"
+title: "Цифровой садик"
 description: "Заметки, мысли и проекты"
 url: "https://dg.ada-dev.ru"   # твой домен
 baseurl: ""                    # если сайт в корне домена
 lang: ru-RU
 favicon: /assets/images/favicons/favicon.ico
 
-footer_scripts:
-  - /_includes/custom-footer-script.html
 
 analytics:
   provider: "google-gtag"   # встроенная интеграция
@@ -19,6 +17,8 @@ analytics:
 # --- Тема ---
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dark"  # варианты: default, air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
+
+breadcrumbs: true
 
 # --- Плагины (совместимые с GitHub Pages) ---
 plugins:
@@ -85,10 +85,6 @@ author:
       icon: "fas fa-rss"
       url: "/feed.xml"
 
-# --- Соц.ссылки (иконки подтянутся автоматически) ---
-social:
-  github: ada-dmitry
-  rss: true
 
 # --- Прочее ---
 markdown: kramdown
