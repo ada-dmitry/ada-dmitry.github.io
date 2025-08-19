@@ -4,6 +4,7 @@ description: "Заметки, мысли и проекты"
 url: "https://dg.ada-dev.ru"   # твой домен
 baseurl: ""                    # если сайт в корне домена
 lang: ru-RU
+favicon: /assets/images/favicons/favicon.ico
 
 # --- Тема ---
 remote_theme: "mmistakes/minimal-mistakes"
