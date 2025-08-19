@@ -7,7 +7,7 @@ lang: ru-RU
 favicon: /assets/images/favicons/favicon.ico
 
 footer_scripts:
-  - /_includes/custom-footer-scripts.html
+  - /_includes/custom-footer-script.html
 
 # --- Тема ---
 remote_theme: "mmistakes/minimal-mistakes"
