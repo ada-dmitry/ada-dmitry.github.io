@@ -19,7 +19,7 @@ permalink: /notes/
 ### {{ folder }} ({{ g.items | size }})
 
 <ul>
-{%- assign items = g.items | sort: "title" -%}
+{%- assign items = g.items | sort: "basename" -%}
 {%- for n in items -%}
   <li><a href="{{ n.url | relative_url }}">{{ n.title }}</a></li>
 {%- endfor -%}
