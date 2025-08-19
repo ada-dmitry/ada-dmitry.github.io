@@ -9,6 +9,13 @@ favicon: /assets/images/favicons/favicon.ico
 footer_scripts:
   - /_includes/custom-footer-script.html
 
+analytics:
+provider: "google-gtag"   # встроенная интеграция
+google:
+  tracking_id: "G-L27WKBFS0F"   # твой GA4 Measurement ID
+  anonymize_ip: true            # опционально
+
+
 # --- Тема ---
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dark"  # варианты: default, air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
