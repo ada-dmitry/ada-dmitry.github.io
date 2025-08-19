@@ -56,11 +56,20 @@ navigation:
 # --- Поиск (встроенный lunr) ---
 search: true
 
-# --- Автор (для сайдбара/карточек) ---
 author:
   name: "ada"
   bio: "Ашалелый пропагандист линукса."
-  avatar: /assets/images/avatar.png  # положи файл, если нужен
+  avatar: /assets/images/avatar.png   # опционально
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/ada-dmitry"
+    - label: "Telegram"
+      icon: "fab fa-telegram"
+      url: "https://t.me/moonlosk"
+    - label: "RSS"
+      icon: "fas fa-rss"
+      url: "/feed.xml"
 
 # --- Соц.ссылки (иконки подтянутся автоматически) ---
 social:
