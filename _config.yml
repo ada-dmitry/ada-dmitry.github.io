@@ -1,5 +1,5 @@
 # --- Сайт ---
-title: "Цифровой садик by ada"
+title: "Цифровой садик $_{by ada}$"
 description: "Заметки, мысли и проекты"
 url: "https://dg.ada-dev.ru"   # твой домен
 baseurl: ""                    # если сайт в корне домена
@@ -57,7 +57,7 @@ navigation:
 search: true
 
 author:
-  name: "ada"
+  name: "Дмитрий Антипенко"
   bio: "Ашалелый пропагандист линукса."
   avatar: /assets/images/avatar.png   # опционально
   links:
