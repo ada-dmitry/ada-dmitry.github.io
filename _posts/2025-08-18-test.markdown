@@ -1,8 +1,0 @@
----
-title: "Мой первый пост"
-layout: single   # или post (зависит от темы)
-categories: blog
-tags: [jekyll, тест]
----
-
-Содержимое поста.

@@ -3,6 +3,7 @@ title: Домашняя страница
 layout: home
 classes: wide
 author_profile: true
+permalink: /
 ---
 
 Привет! Меня зовут Дима (**ada**) и это мой маленький цифровой садик.
