@@ -105,3 +105,8 @@ exclude:
   - node_modules
   - vendor
   - _site
+
+kramdown:
+  input: GFM
+  hard_wrap: true
+
