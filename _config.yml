@@ -61,6 +61,15 @@ defaults:
       toc: false
       author_profile: true
 
+obsidian:
+  vault: "_notes"          # где лежат md-файлы Obsidian
+  wikilinks: true          # включить [[wiki-ссылки]]
+  # ниже — удобные опции
+  downcase: true           # приводить ссылки к нижнему регистру
+  slugify: true            # заменять пробелы/кириллицу на слаг
+  ext: ".md"
+  attachments_dir: "assets/cache/"
+
 # --- Навигация (подключим _data/navigation.yml) ---
 navigation:
   main: true
