@@ -2,14 +2,7 @@ main:
   - title: "Главная"
     url: /
 
-  - title: "Проекты"
-    children:
-      - title: "HomeLab"
-        url: /homelab/
-      - title: "Курс по системной инженерии"
-        url: /system-engineer/
-      - title: "Все Заметки"
-        url: /notes/
-
+  - title: "Заметки"
+    url: /notes/
   - title: "Обо мне"
     url: /aboutme/
