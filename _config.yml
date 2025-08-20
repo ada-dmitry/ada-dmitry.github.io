@@ -50,6 +50,7 @@ defaults:
       type: "notes"
     values:
       layout: single
+      nav: main
       toc: true          # оглавление справа
       author_profile: false
       classes: wide
