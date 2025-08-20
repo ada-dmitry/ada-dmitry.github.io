@@ -27,6 +27,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-obsidian
 
 
 # --- Пагинация постов (если используешь _posts) ---
