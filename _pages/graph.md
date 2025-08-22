@@ -8,7 +8,7 @@ permalink: /graph/
 
 <script src="https://unpkg.com/force-graph"></script>
 <script>
-  fetch('{{ "/graph.json" | relative_url }}')
+  fetch('{{ "/assets/js/graph-data.json" | relative_url }}')
     .then(r => r.json())
     .then(data => {
       const el = document.getElementById('graph');
@@ -27,3 +27,8 @@ permalink: /graph/
       Graph.nodeRelSize(6);
     });
 </script>
+
+<style>
+  #note-graph { height: 70vh; min-height: 420px; }
+</style>
+<div id="note-graph"></div>
