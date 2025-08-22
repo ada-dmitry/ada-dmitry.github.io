@@ -50,8 +50,10 @@ defaults:
       type: "notes"
     values:
       layout: single
-      nav: main
+      sidebar:
+        nav: ""
       toc: true          # оглавление справа
+      toc_sticky: true
       author_profile: false
       classes: wide
   - scope:
@@ -59,7 +61,10 @@ defaults:
       type: "posts"
     values:
       layout: single
-      toc: false
+      sidebar:
+        nav: ""
+      toc: true          # оглавление справа
+      toc_sticky: true
       author_profile: true
 
 obsidian:
