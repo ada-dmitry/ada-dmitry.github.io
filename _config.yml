@@ -73,7 +73,7 @@ defaults:
       author_profile: true
       show_date: false
       show_date_modified: false
-      - scope:
+  - scope:
       path: ""
       type: "pages"
     values:
