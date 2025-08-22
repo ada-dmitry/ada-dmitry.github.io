@@ -35,8 +35,8 @@ plugins:
 
 
 # --- Пагинация постов (если используешь _posts) ---
-paginate: 10
-paginate_path: /page:num/
+# paginate: 10
+# paginate_path: /page:num/
 
 # --- Коллекция заметок для garden ---
 collections:
