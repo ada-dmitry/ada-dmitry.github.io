@@ -1,50 +1,39 @@
 # _plugins/note_graph.rb
 require "json"
+require "fileutils"
 
-module Jekyll
-  class NoteGraphGenerator < Generator
+module NoteGraph
+  class Generator < Jekyll::Generator
     safe true
     priority :low
 
     def generate(site)
-      notes = site.collections["notes"].docs
+      notes = (site.collections["notes"]&.docs) || []
 
       nodes = []
       links = []
 
-      notes.each do |note|
-        # Добавляем узел
-        nodes << { id: note.data["title"] || note.basename_without_ext }
+      notes.each do |doc|
+        title = (doc.data["title"] || doc.basename_without_ext).to_s
+        nodes << { id: title, url: doc.url }
 
-        # Парсим wiki-ссылки [[...]]
-        content = note.content
-        content.scan(/\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/).flatten.each do |target|
-          links << {
-            source: note.data["title"] || note.basename_without_ext,
-            target: target
-          }
+        # [[Note]] / [[Note|alias]] / [[Note#Heading]] / [[Note#Heading|alias]]
+        doc.content.to_s.scan(/\[\[([^\]|#]+)(?:#[^\]]*)?(?:\|[^\]]+)?\]\]/).flatten.each do |raw|
+          target = raw.strip
+          links << { source: title, target: target }
         end
       end
 
-      graph_hash = { nodes: nodes, links: links }
-      json_str   = JSON.pretty_generate(graph_hash)
-
-      site.static_files << GeneratedJson.new(site, json_str)
+      graph = { nodes: nodes.uniq, links: links }
+      site.config["note_graph_json"] = JSON.pretty_generate(graph)
     end
   end
+end
 
-  class GeneratedJson < Jekyll::StaticFile
-    def initialize(site, content)
-      @site    = site
-      @content = content
-      super(site, site.dest, "assets/js", "graph-data.json", nil)
-    end
-
-    def write(_dest)
-      out_path = @site.in_dest_dir("assets/js/graph-data.json")
-      FileUtils.mkdir_p(File.dirname(out_path))
-      File.write(out_path, @content)
-      true
-    end
-  end
+# Пишем файл ПОСЛЕ сборки сайта
+Jekyll::Hooks.register_once :site, :post_write do |site|
+  data = site.config["note_graph_json"] || "{}"
+  out_path = File.join(site.dest, "assets", "js", "graph-data.json")
+  FileUtils.mkdir_p(File.dirname(out_path))
+  File.write(out_path, data)
 end
