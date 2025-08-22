@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Все заметки
+title: "Все заметки"
 permalink: /notes/
 ---
 

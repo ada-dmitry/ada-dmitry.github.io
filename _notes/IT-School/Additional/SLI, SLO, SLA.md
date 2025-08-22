@@ -1,5 +1,5 @@
 ---
-title: SLI, SLO, SLA
+title: "SLI, SLO, SLA"
 ---
 
 ## ✅ SLI — Service Level Indicator

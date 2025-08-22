@@ -1,5 +1,5 @@
 ---
-title: Летняя IT-школа КРОК
+title: "Летняя IT-школа КРОК"
 layout: single
 permalink: /system-engineer/
 ---

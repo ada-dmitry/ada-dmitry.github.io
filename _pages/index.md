@@ -1,5 +1,5 @@
 ---
-title: Домашняя страница
+title: "Домашняя страница"
 layout: home
 classes: wide
 author_profile: true
