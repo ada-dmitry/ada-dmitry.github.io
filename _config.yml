@@ -94,6 +94,7 @@ obsidian:
   slugify: true            # заменять пробелы/кириллицу на слаг
   ext: ".md"
   attachments_dir: "assets/cache/"
+  graph: true
 
 # --- Навигация (подключим _data/navigation.yml) ---
 navigation:
