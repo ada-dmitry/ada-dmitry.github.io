@@ -6,6 +6,7 @@ baseurl: ""                    # если сайт в корне домена
 lang: ru-RU
 favicon: /assets/images/favicons/favicon.ico
 
+locale: ru
 
 analytics:
   provider: "google-gtag"   # встроенная интеграция
