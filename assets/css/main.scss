@@ -1,0 +1,14 @@
+---
+
+---
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'dark' }}"; // твоя тема (dark, neon и т.д.)
+@import "minimal-mistakes"; // подключаем саму тему
+
+/* ниже твои правки */
+html { font-size: 15px; }   /* глобально уменьшаем шрифт */
+body { line-height: 1.6; }
+
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
