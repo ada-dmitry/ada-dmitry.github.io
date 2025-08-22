@@ -7,3 +7,12 @@ main:
 
   - title: "Обо мне"
     url: /aboutme/
+
+
+homelab_nav:            # ← это ГРУППА для бокового меню раздела
+  - title: "Обзор"
+    url: /homelab/
+  - title: "Proxmox"
+    url: /homelab/proxmox/
+  - title: "WireGuard"
+    url: /homelab/wireguard/
