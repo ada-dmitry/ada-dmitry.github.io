@@ -8,6 +8,9 @@ favicon: /assets/images/favicons/favicon.ico
 
 locale: ru
 
+sass:
+  style: compressed
+
 analytics:
   provider: "google-gtag"   # встроенная интеграция
   google:
