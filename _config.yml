@@ -1,5 +1,5 @@
 # --- Сайт ---
-title: "👾 Цифровой садик 👾"
+title: "👾 Цифровой садик"
 description: "Заметки, мысли и проекты"
 url: "https://dg.ada-dev.ru"   # твой домен
 baseurl: ""                    # если сайт в корне домена
@@ -35,8 +35,11 @@ plugins:
 
 
 # --- Пагинация постов (если используешь _posts) ---
-# paginate: 10
-# paginate_path: /page:num/
+paginate: 10
+paginate_path: /page:num/
+
+
+
 
 # --- Коллекция заметок для garden ---
 collections:
@@ -61,6 +64,7 @@ defaults:
       author_profile: false
       show_date: true
       show_date_modified: true
+      show_prev_next: false
   - scope:
       path: ""
       type: "posts"
@@ -72,7 +76,8 @@ defaults:
       toc_sticky: true
       author_profile: true
       show_date: true
-      show_date_modified: falturse
+      show_date_modified: false
+      show_prev_next: false
   - scope:
       path: ""
       type: "pages"
@@ -85,6 +90,7 @@ defaults:
       author_profile: true
       show_date: true
       show_date_modified: true
+      show_prev_next: false
 
 obsidian:
   vault: "_notes"          # где лежат md-файлы Obsidian
