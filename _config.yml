@@ -59,6 +59,8 @@ defaults:
       toc: true          # оглавление справа
       toc_sticky: true
       author_profile: false
+      show_date: false
+      show_date_modified: false
   - scope:
       path: ""
       type: "posts"
@@ -69,6 +71,20 @@ defaults:
       toc: true          # оглавление справа
       toc_sticky: true
       author_profile: true
+      show_date: false
+      show_date_modified: false
+      - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: single
+      sidebar:
+        nav: ""
+      toc: false          # оглавление справа
+      toc_sticky: false
+      author_profile: true
+      show_date: false
+      show_date_modified: false
 
 obsidian:
   vault: "_notes"          # где лежат md-файлы Obsidian
@@ -115,9 +131,6 @@ footer:
     - label: "VK"
       icon: "fab fa-vk"
       url: "https://vk.com/moonlosk"
-    - label: "RSS"
-      icon: "fas fa-rss"
-      url: "/feed.xml"
   since: "2025"
 
 
