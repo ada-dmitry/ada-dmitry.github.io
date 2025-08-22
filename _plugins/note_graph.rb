@@ -98,9 +98,9 @@ module NoteGraph
       end
 
       def write(dest)
-        dest_path = Jekyll.sanitized_path(dest, @dir, @name)
-        FileUtils.mkdir_p(File.dirname(dest_path))
-        File.write(dest_path, JSON.pretty_generate(@data))
+        out_path = site.in_dest_dir('assets/js/graph-data.json')
+        FileUtils.mkdir_p(File.dirname(out_path))
+        File.write(out_path, json)
         true
       end
     end
