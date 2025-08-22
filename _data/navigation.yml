@@ -9,10 +9,12 @@ main:
     url: /aboutme/
 
 
-homelab_nav:            # ← это ГРУППА для бокового меню раздела
-  - title: "Обзор"
+mobile_nav:
+  - title: "📂 Все заметки"
+    url: /notes/
+  - title: "🔬 Домашняя лаборатория"
     url: /homelab/
-  - title: "Proxmox"
-    url: /homelab/proxmox/
-  - title: "WireGuard"
-    url: /homelab/wireguard/
+  - title: "📘 IT-школа"
+    url: /system-engineer/
+  - title: "💬 Контакты"
+    url: /aboutme/#контакты-и-связь
