@@ -56,7 +56,6 @@ defaults:
       toc: true          # оглавление справа
       toc_sticky: true
       author_profile: false
-      classes: wide
   - scope:
       path: ""
       type: "posts"
