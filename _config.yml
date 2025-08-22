@@ -59,8 +59,8 @@ defaults:
       toc: true          # оглавление справа
       toc_sticky: true
       author_profile: false
-      show_date: false
-      show_date_modified: false
+      show_date: true
+      show_date_modified: true
   - scope:
       path: ""
       type: "posts"
@@ -71,8 +71,8 @@ defaults:
       toc: true          # оглавление справа
       toc_sticky: true
       author_profile: true
-      show_date: false
-      show_date_modified: false
+      show_date: true
+      show_date_modified: falturse
   - scope:
       path: ""
       type: "pages"
@@ -83,8 +83,8 @@ defaults:
       toc: false          # оглавление справа
       toc_sticky: false
       author_profile: true
-      show_date: false
-      show_date_modified: false
+      show_date: true
+      show_date_modified: true
 
 obsidian:
   vault: "_notes"          # где лежат md-файлы Obsidian
