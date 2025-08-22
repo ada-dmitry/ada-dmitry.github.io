@@ -98,7 +98,7 @@ module NoteGraph
       end
 
       def write(dest)
-        out_path = site.in_dest_dir('assets/js/graph-data.json')
+        out_path = @site.in_dest_dir('assets/js/graph-data.json')
         FileUtils.mkdir_p(File.dirname(out_path))
         File.write(out_path, json)
         true
