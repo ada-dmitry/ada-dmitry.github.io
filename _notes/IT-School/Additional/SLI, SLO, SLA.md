@@ -1,5 +1,7 @@
 ---
 title: "SLI, SLO, SLA"
+sidebar:
+  nav: mobile_nav
 ---
 
 ## ✅ SLI — Service Level Indicator

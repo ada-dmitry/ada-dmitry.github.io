@@ -2,6 +2,8 @@
 layout: single
 title: "Все заметки"
 permalink: /notes/
+sidebar:
+  nav: mobile_nav 
 ---
 
 {%- comment -%}

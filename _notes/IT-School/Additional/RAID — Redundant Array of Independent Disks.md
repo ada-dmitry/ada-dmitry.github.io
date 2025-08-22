@@ -1,6 +1,8 @@
 ---
 title: "RAID — Redundant Array of Independent Disks"
 description: "Заметки по теме RAID"
+sidebar:
+  nav: mobile_nav
 ---
 
 **RAID** — технология объединения нескольких физических дисков в единый логический массив для повышения:

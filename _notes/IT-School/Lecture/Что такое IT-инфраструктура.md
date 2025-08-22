@@ -1,5 +1,7 @@
 ---
 title: "Что такое IT-инфраструктура"
+sidebar:
+  nav: mobile_nav
 ---
 
 

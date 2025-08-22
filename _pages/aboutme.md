@@ -3,6 +3,8 @@ title: "Обо мне"
 layout: single
 permalink: /aboutme/
 author_profile: true
+sidebar:
+  nav: mobile_nav 
 ---
 ## 👋 Немного о вашем покорном слуге
 Меня зовут **Дима** (*ada* в интернетах).

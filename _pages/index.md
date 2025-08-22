@@ -4,6 +4,8 @@ layout: home
 classes: wide
 author_profile: true
 permalink: /
+sidebar:
+  nav: mobile_nav 
 ---
 
 ## Добро пожаловать в мой цифровой садик! 🌱
