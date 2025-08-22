@@ -31,7 +31,7 @@ module NoteGraph
 end
 
 # Пишем файл ПОСЛЕ сборки сайта
-Jekyll::Hooks.register_once :site, :post_write do |site|
+Jekyll::Hooks.register :site, :post_write do |site|
   data = site.config["note_graph_json"] || "{}"
   out_path = File.join(site.dest, "assets", "js", "graph-data.json")
   FileUtils.mkdir_p(File.dirname(out_path))
