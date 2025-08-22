@@ -104,6 +104,22 @@ author:
       icon: "fas fa-rss"
       url: "/feed.xml"
 
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/ada-dmitry"
+    - label: "Telegram"
+      icon: "fab fa-telegram"
+      url: "https://t.me/moonlosk"
+    - label: "VK"
+      icon: "fab fa-vk"
+      url: "https://vk.com/moonlosk"
+    - label: "RSS"
+      icon: "fas fa-rss"
+      url: "/feed.xml"
+  since: "2025"
+
 
 # --- Прочее ---
 markdown: kramdown
