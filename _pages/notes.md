@@ -3,13 +3,8 @@ layout: single
 title: "Все заметки"
 permalink: /notes/
 sidebar:
-  nav: mobile_nav 
+  nav: mobile_nav
 ---
-
-{%- comment -%}
-Берём _notes/HomeServer/hs1.md → группируем по "HomeServer".
-Если файл лежит прямо в _notes/, кладём его в группу "Без проекта".
-{%- endcomment -%}
 
 {%- assign by_folder = site.notes
   | group_by_exp: "n", "n.path | remove_first: '_notes/' | split: '/' | first" -%}
